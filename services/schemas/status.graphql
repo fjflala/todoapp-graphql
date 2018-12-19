@@ -1,0 +1,5 @@
+enum Status {
+  WIP
+  TODO
+  DONE
+}

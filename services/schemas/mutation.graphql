@@ -1,0 +1,5 @@
+type Mutation {
+  createTodo(input: TodoInput!): Todo
+  deleteTodo(id: Int!): [Todo]
+  editTodo(id: Int!, input: TodoInput!): [Todo]
+}

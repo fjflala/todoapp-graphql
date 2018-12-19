@@ -1,0 +1,5 @@
+type Query {
+  getUser(id: Int): User
+  getUsers(limit: Int, offset: Int): [User]
+  searchUser(q: String): [User]
+}

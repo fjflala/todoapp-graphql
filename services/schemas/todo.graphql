@@ -1,0 +1,8 @@
+type Todo {
+  ID: Int
+  title: String
+  description: String
+  status: Status
+  reported: User
+  assigned: User
+}

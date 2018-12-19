@@ -1,0 +1,7 @@
+input TodoInput {
+  title: String
+  description: String
+  status: Status
+  reported: Int
+  assigned: Int
+}

@@ -1,0 +1,5 @@
+type Query {
+  getTodo(id: Int): Todo
+  getTodos(limit: Int, offset: Int): [Todo]
+  searchTodo(q: String): [Todo]
+}

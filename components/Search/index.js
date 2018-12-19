@@ -12,31 +12,7 @@ import todoService from '../../services/todo.service';
 /**
  * Styles
  */
-const styles = {
-  div: {
-    display: 'inline-block',
-    width: '85%',
-    padding: '0 16px',
-    maxWidth: '800px',
-  },
-  input: {
-    width: '100%',
-    borderRadius: '4px',
-    border: '1px solid #333',
-    padding: '8px'
-  },
-  predictionContainer: {
-    backgroundColor: '#eee',
-    margin: '-3px 0 0',
-    border: '1px solid #333',
-    position: 'relative',
-    zIndex: '10',
-    padding: '16px 8px',
-    listStyle: 'none',
-    borderBottomRightRadius: '4px',
-    borderBottomLeftRadius: '4px',
-  }
-};
+import './styles__small.scss';
 
 /**
  * Search component
@@ -84,15 +60,15 @@ export default class Search extends React.Component {
 
   render() {
     return (
-      <div style={styles.div} ref={node => this.node = node}>
+      <div className="ui-search__container" ref={node => this.node = node}>
         <input
           onFocus={() => this.show(true)}
           onChange={(event) => this.onChange(event)}
-          style={styles.input}
+          className="ui-search__input"
           placeholder="Search a todo"
         />
         {this.state.show && this.state.results.length > 0 && this.state.q.length > 0 && 
-          <ul style={styles.predictionContainer}>
+          <ul className="ui-search__prediction-container">
             {this.state.results && this.state.results.map(todo => (
               <li key={todo.ID}>
                 <Link

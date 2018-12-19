@@ -1,0 +1,76 @@
+.ui-liteitem {
+  position: relative;
+  overflow: hidden;
+
+  &__actions {
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 86.5%;
+    transition: left 0.15s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 0;
+  }
+
+  &__detail {
+    border: 0;
+    background: 0;
+    color: white;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &__status {
+    background-color: #eee;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    padding: 32px 16px;
+    border-left: 1px solid #ccc;
+    width: 77px;
+  }
+
+  &__status--wip {
+    background-color: #fff9ae;
+    border-color: #dab600;
+    color: #a98600;
+  }
+  
+  &__status--done {
+    background-color: #aed581;
+    border-color: #33691e;
+    color: #33691e;
+  }
+
+  &__actions-container {
+    position: absolute;
+    margin-left: 76px;
+  }
+  
+  &__status-label {
+    display: block
+  }
+
+  &:hover .ui-liteitem__actions {
+    left: 80%;
+  }
+
+  &__title-todo {
+    font-weight: 900;
+    margin: 0;
+  }
+
+  &__user {
+    color: #333;
+    font-weight: 900;
+    text-decoration: none;
+  }
+
+  &__line {
+    margin: 0 8px
+  }
+}

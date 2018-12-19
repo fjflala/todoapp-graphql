@@ -17,22 +17,7 @@ import userService from '../services/user.service';
 /**
  * Styles
  */
-const styles = {
-  container: {
-    margin: '32px auto',
-    maxWidth: '600px',
-  },
-  itemContainer: {
-    listStyle: 'none',
-    margin: 'auto',
-    padding: 0,
-    marginBottom: '16px',
-  },
-  listContainer: {
-    padding: 0,
-    listStyle: 'none',
-  }
-};
+import '../styles/index/styles__small.scss';
 
 /**
  * ListView component
@@ -49,7 +34,6 @@ export default class ListView extends React.Component {
   componentDidMount() {
     todoService.getTodos({limit: 10, offset: 0})
       .then(res => {
-        console.log(res)
         this.setState({
           todos: res.data.getTodos,
         });
@@ -57,7 +41,6 @@ export default class ListView extends React.Component {
 
     userService.getUsers({limit: 10, offset: 0})
       .then(res => {
-        console.log(res)
         this.setState({
           users: res.data.getUsers,
         });
@@ -90,32 +73,17 @@ export default class ListView extends React.Component {
   render() {
     return (
       <section className="list-view">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"></link>
-        <style global jsx>{`
-          body,
-          html {
-            background-color: #eee;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            font-family: 'Raleway', cursive;
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-        `}</style>
         <Header />
-        <div style={styles.container}>
+        <div className="ui-container">
           <Card>
             <TodoForm
               users={this.state.users}
               onSubmit={data => this.onTodoAdded(data)}
             />
           </Card>
-          <ul style={styles.listContainer}>
+          <ul className="list-view__list-container">
             {this.state.todos && this.state.todos.map(todo => (
-              <li key={todo.title} style={styles.itemContainer}>
+              <li key={todo.title} className="list-view__item-container">
                 <LiteItem todo={todo} onDelete={() => this.onDelete(todo.ID)} />
               </li>
             ))}

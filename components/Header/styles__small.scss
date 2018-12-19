@@ -1,0 +1,26 @@
+.ui-header {
+  border-bottom: 1px solid #333;
+  position: relative;
+  background-color: #f9f9f9;
+
+  &__container {
+    padding: 16px;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__logo {
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  &__nav {
+    position: absolute;
+    right: 16px;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    padding: 10px 0;
+  }
+}

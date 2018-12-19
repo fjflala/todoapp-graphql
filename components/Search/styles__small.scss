@@ -1,0 +1,27 @@
+.ui-search {
+  &__container {
+    display: inline-block;
+    width: 85%;
+    padding: 0 16px;
+    max-width: 800px;
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #333;
+    padding: 8px;
+  }
+
+  &__prediction-container {
+    background-color: #eee;
+    margin: -3px 0 0;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 10;
+    padding: 16px 8px;
+    list-style: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+}

@@ -16,6 +16,9 @@ const { print } = require('graphql/language/printer');
 const typeUser = require('./schemas/user.graphql');
 const typeQueryUser = require('./schemas/query.user.graphql');
 
+/**
+ * Set DB, using localstorage
+ */
 let DB;
 if (typeof window !== 'undefined') {
   DB = localStorage;

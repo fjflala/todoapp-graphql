@@ -7,18 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Styles
  */
-const styles = {
-  input: {
-    border: '1px solid #333',
-    borderRadius: '2px',
-    width: '100%',
-    margin: '0 0 8px',
-    padding: '8px',
-    backgroundColor: '#f9f9f9',
-    fontSize: '16px',
-    fontFamily: ' \'Raleway\', sans-serif',
-  },
-};
+import './styles__small.scss';
 
 /**
  * Input Component
@@ -54,8 +43,7 @@ export default class Input extends PureComponent {
         defaultValue={defaultValue}
         onChange={onChange}
         type={type}
-        className={className}
-        style={styles.input}
+        className={`ui-input ${className}`}
         placeholder={placeholder} 
       />
     );

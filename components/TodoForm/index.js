@@ -11,11 +11,7 @@ import Select from '../Select';
 /**
  * Styles
  */
-const styles = {
-  title: {
-    margin: '0 0 16px',
-  },
-};
+import './styles__small.scss';
 
 /**
  * TodoForm Component
@@ -70,7 +66,7 @@ export default class TodoForm extends React.Component {
     } = this.props;
     return (
       <React.Fragment>
-        <h3 style={styles.title}>Add Todo</h3>
+        <h3 className="ui-todoform__title">Add Todo</h3>
         <div>
           <Input
             onChange={event => this.onChange(event, 'title')}
@@ -90,7 +86,7 @@ export default class TodoForm extends React.Component {
             ))}
           </Select>
           <Select
-            style={Object.assign({}, styles.input, {width: '47%', display: 'inline-block', marginLeft: '16px'})}
+            style={{width: '47%', display: 'inline-block', marginLeft: '16px'}}
             placeholder="Reported"
             onChange={(event) => this.onChange(event, 'assigned')}
           >
@@ -103,7 +99,6 @@ export default class TodoForm extends React.Component {
         <div>
           <Textarea
             onChange={event => this.onChange(event, 'description')}
-            style={styles.textarea}
             placeholder="Description"
           />
         </div>

@@ -7,17 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Styles
  */
-const styles = {
-  button: {
-    border: 0,
-    backgroundColor: '#333',
-    padding: '8px 16px',
-    boxSizing: 'border-box',
-    color: 'white',
-    borderRadius: '4px',
-    fontSize: '18px',
-  },
-};
+import './styles__small.scss';
 
 /**
  * Button Component
@@ -41,9 +31,8 @@ export default class Button extends PureComponent {
     } = this.props;
     return (
       <button
-        className={className}
+        className={`ui-button ${className}`}
         onClick={onClick}
-        style={styles.button}
       >
         {children}
       </button>

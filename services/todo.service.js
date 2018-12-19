@@ -22,6 +22,9 @@ const typeTodoInput = require('./schemas/todoinput.graphql');
 const typeSchema = require('./schemas/schema.graphql');
 const typeStatus = require('./schemas/status.graphql');
 
+/**
+ * Set DB, using localstorage
+ */
 let DB;
 if (typeof window !== 'undefined') {
   DB = localStorage;

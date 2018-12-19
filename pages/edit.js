@@ -15,6 +15,11 @@ import Select from '../components/Select';
 import todoService from '../services/todo.service';
 
 /**
+ * Styles
+ */
+import '../styles/edit/styles__small.scss';
+
+/**
  * DetailView component
  */
 export default class DetailView extends Component {
@@ -61,25 +66,6 @@ export default class DetailView extends Component {
   render () {
     return (
       <section className="detail-view">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"></link>
-        <style global jsx>{`
-          body,
-          html {
-            background-color: #eee;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            font-family: 'Raleway', cursive;
-          }
-
-          * {
-            box-sizing: border-box;
-          }
-          .ui-container {
-            max-width: 600px;
-            margin: 32px auto;
-          }
-        `}</style>
         <Header />
         <div className="ui-container">
         {this.state.ID &&

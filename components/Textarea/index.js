@@ -7,18 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Styles
  */
-const styles = {
-  textarea: {
-    border: '1px solid #333',
-    borderRadius: '2px',
-    width: '100%',
-    margin: '8px 0',
-    padding: '8px',
-    backgroundColor: '#f9f9f9',
-    fontSize: '16px',
-    fontFamily: ' \'Raleway\', sans-serif',
-  },
-};
+import './styles__small.scss';
 
 /**
  * Textarea Component
@@ -49,9 +38,8 @@ export default class Textarea extends PureComponent {
     return (
       <textarea
         defaultValue={defaultValue}
-        className={className}
+        className={`ui-textarea ${className}`}
         onChange={onChange}
-        style={styles.textarea}
         placeholder={placeholder}
       />
     );
